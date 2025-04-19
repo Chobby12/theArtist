@@ -1,6 +1,6 @@
 function nameVerifier(name){
     let flag = name.nextElementSibling.children[0]
-    let tester = /^[a-zA-Z\s,]+$/
+    let tester = /^[a-zA-z][a-zA-Z\s,]+$/
     if(name.value.length > 3 && tester.test(name.value)){
         flag.innerText = 'Valid Name'
         flag.style.color = 'green'
