@@ -81,9 +81,9 @@ function confirmPassword(password2){
 
 // to be  revisited!
 function phoneVerifier(number){
-    let flag = name.nextElementSibling.children[0]
+    let flag = number.nextElementSibling.children[0]
     let tester = /^(\+?\d{3})?(\d{4})\-?(\d{3})\-?(\d{4})$/
-    if(tester.test(number)){
+    if(tester.test(number.value)){
         flag.innerText = 'phone number is Valid'
         flag.style.color = 'green'
         return true
