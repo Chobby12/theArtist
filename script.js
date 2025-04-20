@@ -79,6 +79,19 @@ function confirmPassword(password2){
     return false
 }
 
+// to be  revisited!
+function phoneVerifier(number){
+    let flag = name.nextElementSibling.children[0]
+    let tester = /^(\+?\d{3})?(\d{4})\-?(\d{3})\-?(\d{4})$/
+    if(tester.test(number)){
+        flag.innerText = 'phone number is Valid'
+        flag.style.color = 'green'
+        return true
+    }
+    flag.innerHTML = 'Invalid Phone Number'
+    flag.style.color = 'red'
+    return false
+}
 
 const checkBox = document.querySelector('#checkbox')
 let ops = document.querySelector('.ops')
@@ -97,3 +110,7 @@ function checker(){
     ops.style.display = 'none'
     return 0 
 }
+
+// function Submission(){
+    
+// }
